@@ -1,0 +1,375 @@
+:root{
+    --bgColor:black;
+    --fontColor:white;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    transition:background-color 1.5s ease;
+}
+html{
+    font-size:62.5%;
+    overflow-x:hidden;
+}
+.all{
+    display:none;
+    overflow-x: hidden;
+}
+.screen{
+    height:100vh;
+    width:100%;
+    background-color: var(--bgColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.screen-wrapper{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80%;
+    margin:0 auto;
+    height:100%;
+}
+.cards{
+    height:50vh;
+    width:50%;
+}
+
+#nested-screen-2{
+    display:none;
+}
+#nested-screen-22{
+    display:none;
+}
+
+#nested-screen-33{
+    display:none;
+}
+
+
+.hide{
+    visibility:hidden;
+}
+.white{
+    background-color: var(--fontColor);
+    color:var(--bgColor) !important ;
+}
+.nested-screen{
+    height:80vh;
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.half-screen{
+    height: 100vh;
+    width:50%;
+    background-color: var(--bgColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.flex-row{
+    flex-direction: row;
+}
+.nested-screen{
+    height:80vh;
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.parallax{
+    width:50%;
+    height:100vh;
+    overflow: hidden;
+    background-color: var(--bgColor);
+    background-size:contain;
+    background-position: center;
+}
+#scene li img{
+    object-position: left;
+}
+.heading-primary{
+    text-transform: uppercase;
+    font-size:25rem;
+    font-weight: 800;
+    -webkit-text-stroke:var(--fontColor);
+    -webkit-text-stroke-width: 0.1rem;
+    line-height: 20rem;    
+}
+.heading-secondary{
+    display: inline-block;
+    font-size:3rem;
+    font-weight: 800;
+    color:var(--fontColor);
+    line-height:3.5rem;
+}
+.heading-tertiary{
+    font-size:3rem;
+    font-weight: 800;
+    color:var(--fontColor);
+    line-height:3.6rem;
+}
+.para-primary{
+    font-size:8rem;
+    font-weight: 300;
+    color:var(--fontColor);
+    line-height:15rem;
+}
+.para-primary-2{
+    font-size:4rem;
+    font-weight: 400;
+    color:var(--fontColor);
+    line-height:6.4rem;
+}
+.para-secondary{
+    font-size:2.4rem;
+    font-weight: 600;
+    color:#999;
+    line-height:4rem;
+}
+.para-tertiary{
+    font-size:2rem;
+    font-weight: 800;
+    color:var(--fontColor);
+    line-height:1.2rem;
+}
+.a{
+    text-decoration: none;
+    color:var(--fontColor);
+}
+a{
+    text-decoration: none;
+    color:var(--bgColor);
+}
+.padding-top-large{
+    padding-top: 10rem;
+}
+.padding-top-medium{
+    padding-top: 5rem;
+}
+.underline{
+    border-bottom: 0.1rem solid var(--fontColor);
+}
+.padding{
+    padding: 10rem;
+}
+#settings-btn{
+    position:fixed;
+    top:5%;
+    left:90%;
+    z-index:1000;
+    font-size: 8rem;
+}
+#mail{
+    position:fixed;
+    top:5%;
+    right:90%;
+    z-index:1000;
+    font-size: 8rem;
+}
+.center{
+    text-align: center;
+}
+
+.left{
+    text-align: left;
+    width:50vw;
+}
+
+@keyframes fadeInUp {
+    0%{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes byebye{
+    0%{
+        transform: rotate(15deg);
+    }
+    25%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(-15deg);
+    }
+    75%{
+        transform: rotate(0deg);
+    }100%{
+        transform: rotate(15deg);
+    }
+}
+.fadeInUp{
+    animation: fadeInUp 3s ease;
+}
+.fadeIn{
+    animation: fadeIn 2s ease;
+}
+.bye{
+    transform-origin: bottom;
+    animation: byebye 2s linear infinite;
+}
+::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: var(--bgColor);
+}
+  
+::-webkit-scrollbar-thumb {
+    width: 0.5rem;
+    border-radius: 5rem;
+    background-color: var(--fontColor);
+}
+  
+::selection {
+    background-color: transparent;
+}
+@media(max-width:1900){
+    .html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 1500px) {
+    html {
+      font-size: 55%;
+    }
+  
+    .heading-primary {
+      font-size: 20rem;
+    }
+  
+    .para-primary {
+      font-size: 10rem;
+      line-height: 13rem;
+    }
+  
+    .para-primary-2 {
+      font-size: 3rem;
+      line-height: 3rem;
+    }
+}
+
+@media (max-width:1100px){
+    html{
+        font-size: 50%;
+    }
+    .parallax{
+        display: none;
+    }
+    .half-screen{
+        width: 100%;
+    }
+    .para-primary{
+        line-height:10rem;
+    }
+    .para-primary-2{
+        font-size: 2rem;
+        line-height: 3rem;
+    }
+    .half-screen h1{
+        font-size: 8rem;
+        line-height:10rem;
+    }
+}
+
+@media (max-width: 900px) {
+    html {
+      font-size: 30%;
+    }
+  
+    .heading-primary {
+      font-size: 20rem;
+    }
+  
+    .para-primary {
+      font-size: 10rem;
+      line-height: 13rem;
+    }
+    .heading-secondary{
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+    .para-primary-2 {
+      font-size: 3rem;
+      line-height: 5rem;
+    }
+    .para-secondary{
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+}
+  
+@media (max-width: 600px) {
+    html {
+      font-size: 25%;
+    }
+  
+    .heading-primary {
+      font-size: 20rem;
+    }
+    .heading-secondary{
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+    .para-primary {
+      font-size: 10rem;
+      line-height: 13rem;
+    }
+    .para-primary-2 {
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+    .para-secondary{
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+}
+  
+@media (max-width: 450px) {
+    html {
+      font-size: 20%;
+    }
+  
+    .heading-primary {
+      font-size: 20rem;
+    }
+    .heading-secondary{
+        font-size: 5rem;
+        font-weight:550;
+        line-height: 7rem;
+    }
+    .para-primary {
+      font-size: 10rem;
+      line-height: 13rem;
+    }
+  
+    .para-primary-2 {
+      font-size: 5rem;
+      font-weight:550;
+      line-height: 7rem;
+    }
+}
